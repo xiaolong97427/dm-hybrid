@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-navbar>
+    <button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Hello Ionic</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding class="getting-started">
+
+  <h3>Welcome to your first Ionic app!</h3>
+
+  <p>
+    This starter project is our way of helping you get a functional app running in record time.
+  </p>
+  <p>
+    Follow along on the tutorial section of the Ionic docs!
+  </p>
+  <p>
+    <button primary menuToggle>Toggle Menu</button>
+  </p>
+<ion-list inset>
+        <ion-item>
+            <ion-label>Username</ion-label>
+            <ion-input [(ngModel)]="username" type="text" value="xiaolong97427"></ion-input>
+        </ion-item>
+    </ion-list>
+    <div padding>
+        <button block (click)="getRepository()">Search</button>
+    </div>
+    <ion-card *ngFor="let repo of foundRepos">
+        <ion-card-header>
+            {{ repo.name }}
+        </ion-card-header>
+        <ion-card-content>
+            {{ repo.description }}
+        </ion-card-content>
+    </ion-card>
+
+</ion-content>
